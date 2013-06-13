@@ -98,6 +98,7 @@ class SiteController extends Controller
 				$tLimiteOP = NULL;
 		}
 		$this->render('index', array(
+			'min' => min($tLimiteOP, $tLimiteOT, $tLimiteCP, $tLimiteCT),
 			'temperaturaInicial' => $temperaturaInicial,
 			'temperaturaExterior' => $temperaturaExterior,
 			'voltaje' => $voltaje,

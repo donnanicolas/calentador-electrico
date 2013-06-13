@@ -63,7 +63,7 @@
 	    	<tbody>
 	    		<tr>
 	    			<td>
-						<?php echo "Tiempo límite de cubo de telgopor: ".$tLimiteCT ?>
+						<?php echo "Tiempo límite de cubo de Telgopor: ".$tLimiteCT ?>
 	    			</td>
 	    			<td>
 	    				<?php echo 'Temperatura Inicial: ' . $temperaturaInicial ?>
@@ -79,7 +79,7 @@
 	    		</tr>
 	    		<tr>
 	    			<td>
-						<?php echo "Tiempo límite de cilindro de telgopor: ".$tLimiteOT ?><br />
+						<?php echo "Tiempo límite de cilindro de Telgopor: ".$tLimiteOT ?><br />
 	    			</td>
 	    			<td>
 	    				<?php echo 'Voltaje: ' . $voltaje ?>
@@ -95,4 +95,19 @@
 	    		</tr>
 	    	</tbody>
 	    </table>
+		<h4>
+			La mejor opción es: 
+			<em>
+				<?php if ($tLimiteOP == $min): ?>
+					<?php echo 'Cilindro de Poliuretano' ?>
+				<?php elseif($tLimiteOT == $min): ?>
+					<?php echo 'Cilindro de Telgopor' ?>
+				<?php elseif($tLimiteCT == $min): ?>
+					<?php echo 'Cubo de Telgopor' ?>
+				<?php elseif($tLimiteCP == $min): ?>
+					<?php echo 'Cubo de Poliuretano' ?>
+				<?php endif ?>
+			</em>
+		</h4>
+
 <?php endif ?>
